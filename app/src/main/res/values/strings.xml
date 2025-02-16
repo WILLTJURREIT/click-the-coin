@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Crypto Profile</string>
+    <string name="crypto_tokens_title">Crypto tokens</string>
+    <string name="profit_calc">Profit:</string>
+    <string name="share">Share</string>
+    <string name="share_text">I\'ve clicked %1$d Cryptos for a total of $%2$d #AndroidDessertClicker</string>
+    <string name="sharing_not_available">Sharing Not Available</string>
+</resources>
