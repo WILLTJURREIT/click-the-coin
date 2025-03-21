@@ -27,3 +27,4 @@ class CoinFactActivity : ComponentActivity() {
   fun CoinFactScreen() {
     Text(text = "Bitcoin Is the largest crypto coin by market cap!")
 }
+

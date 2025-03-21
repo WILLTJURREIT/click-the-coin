@@ -1,5 +1,6 @@
 package com.example.coinclickerapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -18,11 +19,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat.startActivity
+import com.example.code_assignment_one.CoinFactActivity
 import com.example.code_assignment_one.R
+
 
 
 class MainActivity : ComponentActivity() {
@@ -34,6 +39,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+
+
+
 @Composable
 fun CoinClickerApp() {
     //  value you want to store in that "state" to be read first, and is changeable.(xrp token)
@@ -44,10 +52,17 @@ fun CoinClickerApp() {
      to work. I did want the images to grow when clicked, and I had it sort of working but
      not its more simple*/
 
+// To launch activities in Compose we use the current context using LocalContext.
+    val context = LocalContext.current
+
+
     CoinClickerScreen(
         currentCoinImageId = currentCoinImageId,
         onCoinClicked = {
+            val intent = Intent(context, CoinFactActivity::class.java)
+            context.startActivity(intent)
         },
+
         //this is a function inside a composable
         onNextCoinClicked = {
             //To change to the next image, swap between two images.

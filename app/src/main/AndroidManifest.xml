@@ -12,6 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Code_assignment_one"
         tools:targetApi="31">
+
+        <!--MainActivity-->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -22,6 +24,14 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <!--CoinFactActivity (I struggled with this part)-->
+        <activity
+            android:name=".CoinFactActivity"
+            android:label="Coin Fact"
+            android:theme="@style/Theme.Code_assignment_one">
         </activity>
     </application>
 
