@@ -8,12 +8,24 @@ the new activity so the app knows it exists.
  */
 
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.LocalActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 
 class CoinFactActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +37,33 @@ class CoinFactActivity : ComponentActivity() {
 // Display a random coin fact
 } @Composable
   fun CoinFactScreen() {
-    Text(text = "Bitcoin Is the largest crypto coin by market cap!")
-}
+    // I need to add this variable reference of the current activity
+      val activity = LocalActivity.current
 
+
+     // Adding a bit of
+      Column(
+          modifier = Modifier
+              .fillMaxSize()
+              .padding(14.dp),
+          horizontalAlignment = Alignment.CenterHorizontally,
+          verticalArrangement = Arrangement.Center) {
+          Text(text = "Coin Fact")
+
+          Spacer(modifier = Modifier.height(20.dp))
+
+    // button which will take you back to the main page.
+
+          Button(
+              onClick = { activity?.finish() },
+              modifier = Modifier.padding(top=16.dp)
+          ){
+              Text(text = "Go Back")
+          }
+      }
+
+
+
+
+
+  }
