@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+
+    <!--This accesses metedata-->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,7 +16,7 @@
         android:theme="@style/Theme.Code_assignment_one"
         tools:targetApi="31">
 
-        <!--MainActivity-->
+        <!--Entry to MainActivity-->
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -27,7 +30,7 @@
         </activity>
 
 
-        <!--CoinFactActivity (I struggled with this part)-->
+        <!--Entry to CoinFactActivity (I struggled with this part)-->
         <activity
             android:name=".CoinFactActivity"
             android:label="Coin Fact"

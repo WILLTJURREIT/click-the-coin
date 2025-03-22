@@ -9,4 +9,6 @@
     <!--Adding this to make this text easily reusable and updatable across the app -->
 
     <string name="favorite_fragment_title">Favorite Fragment</string>
+    <string name="price">Price</string>
+    <string name="date">Date</string>
 </resources>
