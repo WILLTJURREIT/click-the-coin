@@ -5,4 +5,8 @@
     <string name="share">Share</string>
     <string name="share_text">I\'ve clicked %1$d Cryptos for a total of $%2$d #AndroidDessertClicker</string>
     <string name="sharing_not_available">Sharing Not Available</string>
+
+    <!--Adding this to make this text easily reusable and updatable across the app -->
+
+    <string name="favorite_fragment_title">Favorite Fragment</string>
 </resources>

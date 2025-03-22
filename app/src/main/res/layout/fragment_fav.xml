@@ -1,0 +1,40 @@
+<!-- fragment_fav.xml resource -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/favoriteTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/favorite_fragment_title"
+        android:textSize="18sp"
+        android:padding="16dp" />
+       <!--Here is where I add extra to create a
+       RecyclerView so it can display a scrollable
+       list of the coinsLinearLayout is used for
+       organizing the views vertically (the last 2 i
+       added android:textSize="18sp" android:padding="16dp")-->
+
+<!--This is for the RecyclerView to be able to
+ display the list of favourite coins-->
+
+    <!--Note: this had an error and was red, but I was able
+    to click and add a dependency then sync right from this file-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFav"
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="0dp"
+    android:layout_weight="1"/>
+<!--These last 2 are for making the height of the view more flexible,
+ and then takes up the remaining space of its parent,..-->
+</LinearLayout>
+
+
+<!--I am adding many comments, because I want to
+document my learning, I am putting a lot of
+extra effort and time into understanding how these
+things work, and how to create them so I can better
+ understand how to create the logic for these apps-->
